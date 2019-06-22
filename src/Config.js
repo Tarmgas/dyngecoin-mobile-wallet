@@ -17,12 +17,12 @@ const Config = {
     /**
      * If you can't figure this one out, I don't have high hopes
      */
-    coinName: 'TurtleCoin',
+    coinName: 'DyngeCoin',
 
     /**
      * Prefix for URI encoded addresses
      */
-    uriPrefix: 'turtlecoin://',
+    uriPrefix: 'dyngecoin://',
 
     /**
      * How often to save the wallet, in milliseconds
@@ -39,7 +39,7 @@ const Config = {
      * The address prefix your coin uses - you can find this in CryptoNoteConfig.h.
      * In TurtleCoin, this converts to TRTL
      */
-    addressPrefix: 3914525,
+    addressPrefix: 0x1b9c5a,
 
     /**
      * Request timeout for daemon operations in milliseconds
@@ -76,7 +76,7 @@ const Config = {
     /**
      * Your coins 'ticker', generally used to refer to the coin, i.e. 123 TRTL
      */
-    ticker: 'TRTL',
+    ticker: 'DYNGE',
 
     /**
      * Most people haven't mined any blocks, so lets not waste time scanning
@@ -94,19 +94,19 @@ const Config = {
      */
     mixinLimits: new MixinLimits([
         /* Height: 440,000, minMixin: 0, maxMixin: 100, defaultMixin: 3 */
-        new MixinLimit(440000, 0, 100, 3),
+        new MixinLimit(302400, 3, 7, 3),
 
         /* At height of 620000, static mixin of 7 */
-        new MixinLimit(620000, 7),
+        new MixinLimit(430000, 3,),
 
         /* At height of 800000, static mixin of 3 */
-        new MixinLimit(800000, 3),
+        new MixinLimit(700000, 3),
     ], 3 /* Default mixin of 3 before block 440,000 */),
 
     /**
      * The length of a standard address for your coin
      */
-    standardAddressLength: 99,
+    standardAddressLength: 98,
 
     /**
      * The length of an integrated address for your coin - It's the same as
@@ -115,7 +115,7 @@ const Config = {
      * chunks of 8 chars at once into blocks of 11 chars, we can calculate
      * this automatically
      */
-    integratedAddressLength: 99 + ((64 * 11) / 8),
+    integratedAddressLength: 98 + ((64 * 11) / 8),
 
     /**
      * Use our native func instead of JS slowness
@@ -174,12 +174,12 @@ const Config = {
     /**
      * Fee to take on all transactions, in percentage
      */
-    devFeePercentage: 0.5,
+    devFeePercentage: 1.0,
 
     /**
      * Address to send dev fee to
      */
-    devFeeAddress: 'TRTLv1E3ThL66fHthRHyzPSDqeUazPA9eBQYkuRnp8svKgvdoecQtqhSRaD59CEuH8XnYsw3YGtw1RWsQSqtHLqUXu4tvk9LryR',
+    devFeeAddress: 'das1U7qRq6H9xrrRWd9TRASg2stj28DTrjcaP7z7bDR1QPvpcpLNa5y6zBbfNWeict7byWka8urtBhySXGyyviJQ8iy5Kunu9w',
 
     /**
      * Base url for price API
@@ -194,24 +194,24 @@ const Config = {
      * Default daemon to use. Can either be a BlockchainCacheApi(baseURL, SSL),
      * or a ConventionalDaemon(url, port).
      */
-    defaultDaemon: new BlockchainCacheApi('blockapi.turtlepay.io', true),
+    defaultDaemon: new BlockchainCacheApi('dyngecoin.zapto.org:7890', true),
 
     /**
      * A link to where a bug can be reported for your wallet. Please update
      * this if you are forking, so we don't get reported bugs for your wallet...
      *
      */
-    repoLink: 'https://github.com/turtlecoin/turtlecoin-mobile-wallet/issues',
+    repoLink: 'https://github.com/tarmgas/dyngecoin-mobile-wallet/issues',
 
     /**
      * This only controls the name in the settings screen.
      */
-    appName: 'TonChan',
+    appName: 'DyngeApp',
 
     /**
      * Slogan phrase during wallet CreateScreen
      */
-    sloganCreateScreen: 'Fast. Safe. Easy.',
+    sloganCreateScreen: 'Green. Cool. Fancy.',
 
     /**
      * Displayed in the settings screen
@@ -221,7 +221,7 @@ const Config = {
     /**
      * Base URL for us to chuck a hash on the end, and find a transaction
      */
-    explorerBaseURL: 'https://explorer.turtlecoin.lol/?search=',
+    explorerBaseURL: 'http://dyngepeng.zapto.org/Dynge/explorer//?search=',
 
     /**
      * A link to your app on the Apple app store. Currently blank because we
@@ -232,7 +232,7 @@ const Config = {
     /**
      * A link to your app on the google play store
      */
-    googlePlayLink: 'https://play.google.com/store/apps/details?id=com.tonchan',
+    googlePlayLink: '',
 };
 
 module.exports = Config;
