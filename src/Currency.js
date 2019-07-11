@@ -39,7 +39,7 @@ function getCurrencyTickers() {
 
 export async function coinsToFiat(amount, currencyTicker) {
     /* Coingecko returns price with decimal places, not atomic */
-    let nonAtomic = amount / (10 ** Config.decimalPlaces);
+    let nonAtomic = amount / (2 ** Config.decimalPlaces);
 
     let prices = Globals.coinPrice || {};
 

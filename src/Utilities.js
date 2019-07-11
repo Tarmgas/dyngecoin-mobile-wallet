@@ -97,7 +97,7 @@ export function dateToScanHeight(date) {
 }
 
 export function getArrivalTime() {
-    const minutes = Config.blockTargetTime >= 60;
+    const minutes = Config.blockTargetTime >= 30;
 
     if (minutes) {
         return Math.ceil(Config.blockTargetTime / 60) + ' minutes!';
@@ -179,7 +179,7 @@ export function parseURI(qrData) {
         let amountNonAtomic = undefined;
 
         if (!isNaN(amountAtomic)) {
-            amountNonAtomic = amountAtomic / (10 ** Config.decimalPlaces);
+            amountNonAtomic = amountAtomic / (2 ** Config.decimalPlaces);
 
             /* Got an amount, can go straight to confirmation, if we have enough balance */
             const [unlockedBalance, lockedBalance] = Globals.wallet.getBalance();

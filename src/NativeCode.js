@@ -5,7 +5,7 @@
 'use strict';
 
 import { NativeModules } from 'react-native';
-import { TransactionInput } from 'turtlecoin-wallet-backend';
+import { TransactionInput } from 'dyngecoin-wallet-backend';
 
 export async function generateKeyImage(
     publicEphemeral,

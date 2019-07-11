@@ -10,9 +10,9 @@ export const Themes = {
         backgroundColour: 'white',
 
         /**
-         * The primary colour used by the wallet, for TurtleCoin this is green
+         * The primary colour used by the wallet, for TurtleCoin this is green, change to dynge-brown
          */
-        primaryColour: '#40C18E',
+        primaryColour: '#c16d3f',
 
         /**
          * Colour for the background circles on the pin page

@@ -6,7 +6,7 @@ import { Platform } from 'react-native';
 
 import {
     MixinLimit, MixinLimits, BlockchainCacheApi, ConventionalDaemon
-} from 'turtlecoin-wallet-backend';
+} from 'dyngecoin-wallet-backend';
 
 import {
     derivePublicKey, generateKeyDerivation, generateRingSignatures,
