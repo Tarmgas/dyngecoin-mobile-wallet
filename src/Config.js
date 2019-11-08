@@ -94,13 +94,13 @@ const Config = {
      */
     mixinLimits: new MixinLimits([
         /* Height: 440,000, minMixin: 0, maxMixin: 100, defaultMixin: 3 */
-        new MixinLimit(302400, 3, 7, 3),
+        new MixinLimit(302400, 0, 30, 0),
 
         /* At height of 620000, static mixin of 7 */
-        new MixinLimit(430000, 3,),
+        new MixinLimit(430000, 0,),
 
         /* At height of 800000, static mixin of 3 */
-        new MixinLimit(700000, 3),
+        new MixinLimit(700000, 0),
     ], 3 /* Default mixin of 3 before block 440,000 */),
 
     /**
