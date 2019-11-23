@@ -87,7 +87,7 @@ const Config = {
     /**
      * The minimum fee allowed for transactions, in ATOMIC units
      */
-    minimumFee: 10,
+    minimumFee: 1,
 
     /**
      * Mapping of height to mixin maximum and mixin minimum
@@ -101,7 +101,7 @@ const Config = {
 
         /* At height of 800000, static mixin of 3 */
         new MixinLimit(700000, 0),
-    ], 3 /* Default mixin of 3 before block 440,000 */),
+    ], 0 /* Default mixin of 3 before block 440,000 */),
 
     /**
      * The length of a standard address for your coin
@@ -194,7 +194,7 @@ const Config = {
      * Default daemon to use. Can either be a BlockchainCacheApi(baseURL, SSL),
      * or a ConventionalDaemon(url, port).
      */
-    defaultDaemon: new BlockchainCacheApi('dyngecoin.zapto.org:7890', true),
+    defaultDaemon: new BlockchainCacheApi('dyngecoin.zapto.org:7776', true),
 
     /**
      * A link to where a bug can be reported for your wallet. Please update
